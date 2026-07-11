@@ -17,6 +17,53 @@ Run like:
 ;; ANSWER SECTION:
 github.com. 60 IN A 140.82.121.3
 
+
+For NDJSON output use --json
+(the following is printed printed by piping through jq)
+
+{
+  "header": {
+    "id": 65184,
+    "flags": 33152,
+    "opcode": "QUERY",
+    "rcode": "NOERROR",
+    "qr": true,
+    "aa": false,
+    "tc": false,
+    "rd": true,
+    "ra": true,
+    "ad": false,
+    "cd": false
+  },
+  "sections": {
+    "question": [
+      {
+        "name": "github.com.",
+        "type": "A",
+        "class": "IN"
+      }
+    ],
+    "answer": [
+      {
+        "name": "github.com.",
+        "type": "A",
+        "class": "IN",
+        "ttl": 60,
+        "rdlen": 4,
+        "rdata": "140.82.121.3"
+      }
+    ],
+    "authority": [],
+    "additional": []
+  },
+  "edns": {
+    "present": false,
+    "version": null,
+    "flags": null,
+    "udp_size": null
+  }
+}
+
 --------------
 
 I have written around seven DNS wire parsers.

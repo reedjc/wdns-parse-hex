@@ -19,7 +19,6 @@ github.com. 60 IN A 140.82.121.3
 
 
 For NDJSON output use --json
-(the following is printed printed by piping through jq)
 
 {
   "header": {
